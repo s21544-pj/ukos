@@ -1,0 +1,2 @@
+wget -O - https://www.nbp.pl/kursy/xml/a203z191018.xml 2>/dev/null | grep -P --text '(nazwa_waluty)|(kurs_sredni)' | sed 's/^ *//' | sed 's:</*[a-z_]*>::g' | tr -d '\r' | sed 'N; s/\n/: /'
+

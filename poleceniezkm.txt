@@ -1,0 +1,1 @@
+wget --quiet -O - https://ztm.gda.pl/rozklady/pobierz_SIP.php?n[0]=1396&t=&l=210 2>/dev/null | sed 's/.*<tr>//;s/<\/tr>.*//' | grep -P 'za'
